@@ -1,0 +1,34 @@
+﻿<Window x:Class="League_Mates.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:League_Mates"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Margin="0,0,0,-16" RenderTransformOrigin="0.522,0.492">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1184,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.333,1.219" Height="20" Width="40" Click="Button_Click"/>
+        <GroupBox Header="GroupBox" Margin="10,10,250,360">
+            <Grid Height="85" Margin="34,0,8,0">
+                <TextBox x:Name="TextBoxAPIKEY" HorizontalAlignment="Left" Margin="13,10,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+                <TextBox x:Name="TextBoxSumonnerName" HorizontalAlignment="Left" Margin="12,41,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+                <ListView x:Name="ListView1" Margin="101,229,67,-413">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Path=Time}" />
+                            <GridViewColumn Header="Searched" DisplayMemberBinding="{Binding Path=Searched}" />
+                            <GridViewColumn Header="Ally 1" DisplayMemberBinding="{Binding Path=Ally1}" />
+                            <GridViewColumn Header="Ally 2" DisplayMemberBinding="{Binding Path=Ally2}" />
+                            <GridViewColumn Header="Ally 3" DisplayMemberBinding="{Binding Path=Ally3}" />
+                            <GridViewColumn Header="Ally 4" DisplayMemberBinding="{Binding Path=Ally4}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
